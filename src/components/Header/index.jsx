@@ -1,20 +1,24 @@
-
-
+import { Container, Profile, Input } from "./styles";
 
 export function Header() {
   return (
-    <header>
-      <a className="logo" href="">RocketMovies</a>
-      <input type="text" id="search" placeholder="Pesquisar pelo título" />
-      <div className="profile">
-        <div>
-          <span>Alex Camargo</span>
-          <button>sair</button>
-        </div>
-        <img src="https://github.com/alexxcamargo1000.png" alt="Foto de perfil" />
-      </div>
-    </header>
-  )
+    <Container>
+      <header>
+        <a className="logo" href="">
+          RocketMovies
+        </a>
+        <Input type="text" id="search" placeholder="Pesquisar pelo título" />
+        <Profile>
+          <div>
+            <span>Alex Camargo</span>
+            <button>sair</button>
+          </div>
+          <img
+            src="https://github.com/alexxcamargo1000.png"
+            alt="Foto de perfil"
+          />
+        </Profile>
+      </header>
+    </Container>
+  );
 }
-
-

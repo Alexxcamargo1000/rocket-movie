@@ -4,7 +4,7 @@ export default {
     PRIMARY: "#FF859B",
 
     BG: "#1C1B1E",
-    BG_BORDER: "#3E3B47",
+    BORDER_IN_BG: "#3E3B47",
     
     BG_INPUT: "#262529",
     TEXT_INPUT: "#F4EDE8",
