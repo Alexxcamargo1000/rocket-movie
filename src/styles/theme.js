@@ -13,7 +13,7 @@ export default {
     TITLE: "#F4EDE8",
     PLACEHOLDER: "#948F99",
     TEXT_IN_PRIMARY: "#312E38",
-    TEXT_IN_BLACK: "#FF859B", 
+    TEXT_BTN_BLACK: "#FF859B", 
   },
   FONTS: {
     TEXT: "'Roboto', sans-serif",

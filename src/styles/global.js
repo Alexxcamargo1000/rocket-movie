@@ -40,6 +40,12 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.PLACEHOLDER};
   }
 
+  button {
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+  }
+
 
 
   .logo{

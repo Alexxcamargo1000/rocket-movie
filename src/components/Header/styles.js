@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.header`
+export const Container = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.BORDER_IN_BG};
-
+  height: fit-content;
+  
   > header {
     display: flex;
     align-items: center;
@@ -54,9 +55,6 @@ export const Profile = styled.div`
     button {
       background-color: transparent;
       color: ${({ theme }) => theme.COLORS.PLACEHOLDER};
-      border: none;
-      cursor: pointer;
-
       font-size: 1.4rem;
       line-height: 1.8rem;
 
