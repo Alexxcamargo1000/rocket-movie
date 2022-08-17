@@ -37,6 +37,9 @@ export const ContainerTitle = styled.div`
     font-size: 1.6rem;
     line-height: 2.1rem;
     border-radius: 8px;
+    display:flex;
+    align-items:center;
+    gap: 4px;
 
     &:hover {
       color: ${({ theme }) => theme.COLORS.PRIMARY};
