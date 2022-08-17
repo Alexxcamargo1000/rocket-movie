@@ -16,7 +16,7 @@ export function Home() {
         </ContainerTitle>
 
         <Cards>
-          <NoteMovie />
+          <NoteMovie /> 
           <NoteMovie />
           <NoteMovie />
           <NoteMovie />
