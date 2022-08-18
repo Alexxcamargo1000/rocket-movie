@@ -1,5 +1,5 @@
 
-export function NewMovie() {
+export function New() {
   return (
     <div>
       <h1>Novo</h1>

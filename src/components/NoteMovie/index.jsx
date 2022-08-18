@@ -13,7 +13,7 @@ export function NoteMovie() {
       </StarsWrapper>
 
       <p>
-        Pragas nas colheitas fizeram a civilização humana regredir para uma
+        Pragas n colheitas fizeram a civilização humana regredir para uma
         sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da
         NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de
         Cooper, acredita que seu quarto está assombrado por um fantasma que
@@ -39,8 +39,6 @@ export function NoteMovie() {
         Terra. Eles entram em Miller e descobrem que é inóspito já que é coberto
         por um oceano raso e agitado por ondas enormes. Uma onda atinge a
         tripulação enquanto Amelia tenta recuperar os dados de Miller, matando
-        Doyle e atrasando a partida. Ao voltarem para a Endurance, Cooper e
-        Amelia descobrem que 23 anos se passaram.
       </p>
 
       <TagsWrapper>

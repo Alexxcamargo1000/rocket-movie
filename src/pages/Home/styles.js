@@ -28,7 +28,7 @@ export const ContainerTitle = styled.div`
     line-height: 42px;
   }
 
-  button {
+  a {
     padding: 1.2rem 3.2rem;
     color: ${({ theme }) => theme.COLORS.TEXT_IN_PRIMARY};
     background-color: ${({ theme }) => theme.COLORS.PRIMARY};

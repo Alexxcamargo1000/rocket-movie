@@ -5,7 +5,9 @@ import { AppRoutes } from "./app.routes";
 export function Routes() {
   return (
     <BrowserRouter>
-      <AppRoutes />
+      <AppRoutes /> 
+
+      
     </BrowserRouter>
   )
 }
