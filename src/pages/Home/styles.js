@@ -5,7 +5,6 @@ export const Container = styled.div`
   height: 100vh;
   display: grid;
   grid-template-rows: 11.6rem auto;
-
   > main {
     overflow-y: auto;
     width: min(112rem, 90%);
@@ -21,13 +20,11 @@ export const ContainerTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-block: 5rem;
-
   h1 {
     font-weight: 400;
     font-size: 32px;
     line-height: 42px;
   }
-
   a {
     padding: 1.2rem 3.2rem;
     color: ${({ theme }) => theme.COLORS.TEXT_IN_PRIMARY};
@@ -40,7 +37,6 @@ export const ContainerTitle = styled.div`
     display:flex;
     align-items:center;
     gap: 4px;
-
     &:hover {
       color: ${({ theme }) => theme.COLORS.PRIMARY};
       background-color: ${({ theme }) => theme.COLORS.TEXT_IN_PRIMARY};
@@ -55,7 +51,6 @@ export const Cards = styled.div`
   height: 100%;
   gap: 3.2rem;
   justify-content: flex-start;
-
   &::-webkit-scrollbar {
     width: 1rem;
     
@@ -63,7 +58,6 @@ export const Cards = styled.div`
   &::-webkit-scrollbar-track {
     background: ${({ theme }) => theme.COLORS.BG};
   }
-
   &::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.COLORS.PRIMARY};
     border-radius:32px;

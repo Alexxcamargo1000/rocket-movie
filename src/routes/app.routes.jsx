@@ -1,7 +1,7 @@
 import { Route, Routes,  } from "react-router-dom";
 
 import { Home } from '../Pages/Home'
-import { New } from '../pages/New'
+import { New } from '../Pages/New'
 
 export function AppRoutes() {
   return (

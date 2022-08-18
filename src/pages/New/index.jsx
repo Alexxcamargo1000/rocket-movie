@@ -1,8 +1,9 @@
+import { Container } from "./styles";
 
 export function New() {
   return (
-    <div>
-      <h1>Novo</h1>
-    </div>
+    <Container>
+      
+    </Container>
   )
 }
