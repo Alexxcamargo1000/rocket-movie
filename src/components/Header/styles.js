@@ -20,11 +20,8 @@ export const Container = styled.div`
   }
 `;
 
-export const Input = styled.input`
+export const InputWrapper = styled.div`
   width: 63rem;
-  height: 5.6rem;
-  padding-left: 2.4rem;
-  border-radius: 1rem;
 `;
 
 export const Profile = styled.div`
