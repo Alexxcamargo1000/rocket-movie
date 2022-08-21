@@ -6,11 +6,9 @@ export const Container = styled.div`
   display: grid;
   grid-template-rows: 11.6rem auto;
   > main {
-    overflow-y:auto;
-    width: min(113.7rem, 90%);
+    overflow-y: auto;
+    width: min(112rem, 90%);
     margin: 0 auto;
-    padding-bottom: 4rem;
-    padding-right: 1.6rem;
 
     &::-webkit-scrollbar {
       width: 1rem;
@@ -56,11 +54,12 @@ export const TitleWrapper = styled.div`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3.2rem;
+  padding: 1rem;
 
   > .inputWrapper {
     display: flex;
-    gap: 4rem;
+    gap: 3.2rem;
 
     > input {
       font-size: 1.6rem;
@@ -94,48 +93,14 @@ export const TagsWrapper = styled.div`
   flex-direction: column;
   gap: 2.4rem;
   flex-wrap: wrap;
+`;
 
-  > div {
-    display: flex;
-    gap: 2.4rem;
-    padding: 1.6rem;
-    background: #0d0c0f;
-    border-radius: 8px;
-
-    .active {
-      padding: 1.6rem;
-      border-radius: 1rem;
-      display: flex;
-      align-items: center;
-      background: ${({ theme }) => theme.COLORS.BG_INPUT};
-
-      input {
-        font-size: 1.6rem;
-        line-height: 1.9rem;
-      }
-
-      svg {
-        color: ${({ theme }) => theme.COLORS.PRIMARY};
-      }
-    }
-
-    .tag {
-      border: 1px dashed ${({ theme }) => theme.COLORS.BG_INPUT};
-      padding: 1.6rem;
-      border-radius: 1rem;
-      display: flex;
-      align-items: center;
-
-      input {
-        font-size: 1.6rem;
-        line-height: 1.9rem;
-        background-color: transparent;
-      }
-      svg {
-        color: ${({ theme }) => theme.COLORS.PRIMARY};
-      }
-    }
-  }
+export const Tags = styled.div`
+  display: flex;
+  gap: 2.4rem;
+  padding: 1.6rem;
+  background: #0d0c0f;
+  border-radius: 8px;
 `;
 
 export const ButtonWrapper = styled.div`
@@ -156,11 +121,10 @@ export const ButtonWrapper = styled.div`
     &:hover {
       filter: brightness(0.8);
     }
-
   }
 
   .delete {
-    background: #0D0C0F;
+    background: #0d0c0f;
     color: ${({ theme }) => theme.COLORS.PRIMARY};
   }
 

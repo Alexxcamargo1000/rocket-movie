@@ -2,7 +2,15 @@ import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { ArrowLeft, X, Plus } from "phosphor-react";
 
-import { Container, TitleWrapper, Form, TagsWrapper, ButtonWrapper } from "./styles";
+import {
+  Container,
+  TitleWrapper,
+  Form,
+  TagsWrapper,
+  Tags,
+  ButtonWrapper,
+} from "./styles";
+import { Tag } from "../../components/Tag";
 
 export function New() {
   return (
@@ -35,17 +43,10 @@ export function New() {
 
           <TagsWrapper>
             <span>Marcadores</span>
-            <div>
-              <div className="tag active">
-                <input type="text" value="Drama"  />
-                <X size={16} />
-              </div>
-
-              <div className="tag">
-                <input type="text" placeholder="Novo Marcadoror"  />
-                <Plus size={16} />
-              </div>
-            </div>
+            <Tags>
+              <Tag value="Ação" />
+              <Tag isNew placeholder="Novo marcador" />
+            </Tags>
           </TagsWrapper>
 
           <ButtonWrapper>

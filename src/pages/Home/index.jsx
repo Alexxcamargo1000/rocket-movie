@@ -20,6 +20,8 @@ export function Home() {
         <Cards>
           <NoteMovie />
           <NoteMovie />
+          <NoteMovie />
+          <NoteMovie />
         </Cards>
       </main>
     </Container>
