@@ -18,7 +18,9 @@ export function Home() {
         </ContainerTitle>
 
         <Cards>
-          <NoteMovie />
+          <Link to="/preview">
+            <NoteMovie />
+          </Link>
           <NoteMovie />
           <NoteMovie />
           <NoteMovie />

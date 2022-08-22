@@ -1,7 +1,7 @@
 import { Header } from "../../components/Header";
 import { TagItem } from "../../components/TagItem";
 import { ArrowLeft, Star, Clock } from "phosphor-react";
-
+import { Link } from "react-router-dom";
 import { Container, TitleWrapper, Title, InfoUser, TagsWrapper, Content } from "./styles";
 
 export function Preview() {
@@ -10,10 +10,10 @@ export function Preview() {
       <Header />
       <main>
         <TitleWrapper>
-          <a href="/">
+          <Link to="/">
             <ArrowLeft size={19} />
             Voltar
-          </a>
+          </Link>
           <Title>
             <h1>Interestellar</h1>
             <div className="rating">

@@ -1,6 +1,7 @@
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
-import { ArrowLeft, X, Plus } from "phosphor-react";
+import { ArrowLeft } from "phosphor-react";;
+import { Link } from "react-router-dom"
 
 import {
   Container,
@@ -18,10 +19,10 @@ export function New() {
       <Header />
       <main>
         <TitleWrapper>
-          <a href="/">
+          <Link to="/">
             <ArrowLeft size={19} />
             Voltar
-          </a>
+          </Link>
           <h1>Novo filme</h1>
         </TitleWrapper>
 
@@ -54,6 +55,7 @@ export function New() {
             <button className="save">Salvar alterações</button>
           </ButtonWrapper>
         </Form>
+        
       </main>
     </Container>
   );
