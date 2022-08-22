@@ -12,6 +12,12 @@ export const Container = styled.div`
   border: ${({ theme, isNew }) =>
     isNew ? `1px dashed ${theme.COLORS.PLACEHOLDER}` : `none`};
 
+  &:focus-within {
+    outline-offset: 2px;
+    outline: ${({ theme, isNew }) =>
+    isNew ? `1px solid ${theme.COLORS.BG_INPUT}` : `none`};
+  }
+
   input {
     font-size: 1.6rem;
     line-height: 1.9rem;

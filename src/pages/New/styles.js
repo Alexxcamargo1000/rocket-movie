@@ -75,6 +75,10 @@ export const Form = styled.form`
     resize: none;
     overflow-y: auto;
     font-size: 1.6rem;
+    
+    &:focus {
+      outline: 1px solid ${({ theme }) => theme.COLORS.PLACEHOLDER};
+    }
     &::-webkit-scrollbar {
       width: 1rem;
     }
