@@ -39,7 +39,22 @@ export const Container = styled.div`
     .avatar {
       margin-top: -9.3rem;
       margin-bottom: 6.4rem;
-      text-align: center;
+      margin-inline: auto;
+      position: relative;
+      width:fit-content;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 2.9rem;
+        position: absolute;
+        bottom: 0;
+        right:10px;
+        background-color: ${({ theme }) => theme.COLORS.PRIMARY};
+      }
 
       img {
         width: 18.6rem;

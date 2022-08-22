@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "phosphor-react";
 import { Input } from "../../components/Input";
 import { Container } from "./styles";
-import { User, EnvelopeSimple, LockSimple } from "phosphor-react";
+import { User, EnvelopeSimple, LockSimple, Camera } from "phosphor-react";
 export function Profile() {
   return (
     <Container>
@@ -16,6 +16,9 @@ export function Profile() {
       <main>
         <div className="avatar">
           <img src="https://github.com/alexxcamargo1000.png" alt="" />
+          <button>
+            <Camera size={20} />
+          </button>
         </div>
 
         <form action="">
@@ -34,7 +37,9 @@ export function Profile() {
 
           <Input type="password" icon={LockSimple} placeholder="Senha atual" />
           <Input type="password" icon={LockSimple} placeholder="Nova senha" />
-          <button type="submit" disabled>Salvar</button>
+          <button type="submit" disabled>
+            Salvar
+          </button>
         </form>
       </main>
     </Container>
