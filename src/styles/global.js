@@ -44,6 +44,7 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     transition: 0.2s;
     border: none;
+        font-family: ${({ theme }) => theme.FONTS.TITLE};
   }
 
 

@@ -1,5 +1,6 @@
 import { Container, Profile, InputWrapper } from "./styles";
-import {Input} from "../Input"
+import { Input } from "../Input";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -13,13 +14,15 @@ export function Header() {
         </InputWrapper>
         <Profile>
           <div>
-            <span>Alex Camargo</span>
+            <Link to="/profile">Alex Camargo</Link>
             <button>sair</button>
           </div>
-          <img
-            src="https://github.com/alexxcamargo1000.png"
-            alt="Foto de perfil"
-          />
+          <Link to="/profile">
+            <img
+              src="https://github.com/alexxcamargo1000.png"
+              alt="Foto de perfil"
+            />
+          </Link>
         </Profile>
       </header>
     </Container>

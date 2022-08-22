@@ -29,7 +29,7 @@ export const Profile = styled.div`
   align-items: center;
   gap: 9px;
 
-  > img {
+  > a img {
     width: 6.4rem;
     height: 6.4rem;
     object-fit: cover;
@@ -42,7 +42,7 @@ export const Profile = styled.div`
     align-items: flex-end;
     gap: 4px;
 
-    span {
+    a {
       font-weight: 700;
       font-size: 1.4rem;
       line-height: 1.8rem;
