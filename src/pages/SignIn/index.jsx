@@ -1,6 +1,7 @@
 import { Container } from "./styles";
 import { Input } from "../../components/Input";
 import { EnvelopeSimple, LockSimple } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 export function SignIn() {
   return (
@@ -15,7 +16,7 @@ export function SignIn() {
             <Input icon={LockSimple} type="password" placeholder="Senha"/>
             <button>Entrar</button>
           </form>
-          <a href="">Criar conta</a>
+          <Link to="/create">Criar conta</Link>
         </div>
       </main>
       <div className="bgImage" />
