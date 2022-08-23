@@ -3,6 +3,7 @@ import { ArrowLeft } from "phosphor-react";
 import { Input } from "../../components/Input";
 import { Container } from "./styles";
 import { User, EnvelopeSimple, LockSimple, Camera } from "phosphor-react";
+
 export function Profile() {
   return (
     <Container>

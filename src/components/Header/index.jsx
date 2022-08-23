@@ -6,9 +6,9 @@ export function Header() {
   return (
     <Container>
       <header>
-        <a className="logo" href="">
+        <Link to="/" className="logo">
           RocketMovies
-        </a>
+        </Link>
         <InputWrapper>
           <Input type="text" id="search" placeholder="Pesquisar pelo título" />
         </InputWrapper>

@@ -14,7 +14,7 @@ export const Container = styled.div`
   }
 
   p {
-    max-height: 54px;
+    max-height: 6rem;
     overflow: hidden;
     margin-block: 1.6rem;
     font-size: 1.6rem;
