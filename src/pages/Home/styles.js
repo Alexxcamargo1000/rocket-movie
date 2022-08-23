@@ -22,8 +22,12 @@ export const ContainerTitle = styled.div`
   margin-block: 5rem;
   h1 {
     font-weight: 400;
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+
+    @media (max-width: 720px) {
+      font-size: 2.4rem;
+    }
   }
   a {
     padding: 1.2rem 3.2rem;
@@ -41,6 +45,10 @@ export const ContainerTitle = styled.div`
       color: ${({ theme }) => theme.COLORS.PRIMARY};
       background-color: ${({ theme }) => theme.COLORS.TEXT_IN_PRIMARY};
     }
+
+    @media (max-width: 720px) {
+      padding: .8rem 1.6rem;
+    }
   }
 `;
 
@@ -51,9 +59,13 @@ export const Cards = styled.div`
   height: 100%;
   gap: 3.2rem;
   justify-content: flex-start;
+  text-align: justify;
   &::-webkit-scrollbar {
     width: 1rem;
-    
+
+    @media (max-width: 720px) {
+      display:none ;
+    }
   }
   &::-webkit-scrollbar-track {
     background: ${({ theme }) => theme.COLORS.BG};
