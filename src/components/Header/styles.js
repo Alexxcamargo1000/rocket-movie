@@ -82,8 +82,9 @@ export const PopUpMobile = styled.div`
   right: 3rem;
   padding: 0.8rem;
   border-radius: 1rem;
-  background-color: ${({ theme }) => theme.COLORS.PRIMARY + "1A"};
-  border: 1px solid ${({ theme }) => theme.COLORS.PRIMARY + "5A"};
+  background-color: ${({ theme }) => theme.COLORS.PRIMARY + "0B"};
+  border: 1px solid ${({ theme }) => theme.COLORS.PRIMARY + "AB"};
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   display: flex;
   flex-direction: column;
@@ -96,11 +97,22 @@ export const PopUpMobile = styled.div`
     display: none;
   }
 
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      color: ${({ theme }) => theme.COLORS.TITLE};
+    }
+  }
+
   button {
     margin-top: 0.8rem;
     background-color: transparent;
     color: ${({ theme }) => theme.COLORS.TITLE};
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.8rem;
   }
 `;

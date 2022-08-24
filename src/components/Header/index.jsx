@@ -52,8 +52,8 @@ export function Header() {
               src="https://github.com/alexxcamargo1000.png"
               alt="Foto de perfil"
             />
+            <span>Alex Camargo</span>
           </Link>
-          <Link to="/profile">Alex Camargo</Link>
           <button>sair</button>
   
       </PopUpMobile>

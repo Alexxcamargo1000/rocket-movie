@@ -14,6 +14,10 @@ export const Container = styled.div`
 
     &::-webkit-scrollbar {
       width: 1rem;
+
+      @media (max-width: 720px) {
+        display: none;
+      }
     }
     &::-webkit-scrollbar-track {
       background: ${({ theme }) => theme.COLORS.BG};
@@ -49,6 +53,10 @@ export const Title = styled.div`
   gap: 1.9rem;
   margin-bottom: 2.4rem;
 
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
+
   h1 {
     font-weight: 500;
     font-size: 36px;
@@ -77,6 +85,9 @@ export const InfoUser = styled.div`
   align-items: center;
   gap: 8px;
   margin-bottom: 4rem;
+  @media (max-width: 720px) {
+    flex-wrap:wrap ;
+  }
 
   > span {
     font-size: 1.6rem;
@@ -94,6 +105,10 @@ export const TagsWrapper = styled.div`
   align-items: center;
   gap: 8px;
   margin-bottom: 4rem;
+
+  @media (max-width: 720px) {
+    flex-wrap:wrap ;
+  }
 `;
 
 export const Content = styled.div`
