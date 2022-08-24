@@ -1,9 +1,23 @@
-import { Container, Profile, InputWrapper } from "./styles";
+import {
+  Container,
+  Profile,
+  InputWrapper,
+  PopUpMobile,
+  ButtonMobile,
+} from "./styles";
 import { Input } from "../Input";
 import { Link } from "react-router-dom";
-import { SignOut } from "phosphor-react";
+import { Plus } from "phosphor-react";
+import { useRef } from "react";
 
 export function Header() {
+  const popUp = useRef(null);
+
+  function heddleTogglePopUp() {
+    popUp.current.classList.toggle("hide");
+
+    console.log(popUp);
+  }
   return (
     <Container>
       <header>
@@ -25,10 +39,24 @@ export function Header() {
             />
           </Link>
         </Profile>
-        <div className="signOutMobile">
-        <SignOut size={20} weight="fill"/> 
-        </div>
       </header>
+
+      <ButtonMobile onClick={heddleTogglePopUp}>
+        <Plus size={20} weight="fill" />
+      </ButtonMobile>
+
+      <PopUpMobile ref={popUp} className="hide">
+
+          <Link to="/profile">
+            <img
+              src="https://github.com/alexxcamargo1000.png"
+              alt="Foto de perfil"
+            />
+          </Link>
+          <Link to="/profile">Alex Camargo</Link>
+          <button>sair</button>
+  
+      </PopUpMobile>
     </Container>
   );
 }

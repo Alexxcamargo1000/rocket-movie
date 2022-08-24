@@ -12,6 +12,9 @@ export const Container = styled.div`
 
     &::-webkit-scrollbar {
       width: 1rem;
+      @media (max-width: 720px) {
+        display: none;
+      }
     }
     &::-webkit-scrollbar-track {
       background: ${({ theme }) => theme.COLORS.BG};
@@ -61,6 +64,11 @@ export const Form = styled.form`
     display: flex;
     gap: 3.2rem;
 
+    @media (max-width: 720px) {
+     flex-wrap: wrap;
+     gap: .8rem;
+    }
+
     > input {
       font-size: 1.6rem;
     }
@@ -75,7 +83,7 @@ export const Form = styled.form`
     resize: none;
     overflow-y: auto;
     font-size: 1.6rem;
-    
+
     &:focus {
       outline: 1px solid ${({ theme }) => theme.COLORS.PLACEHOLDER};
     }
@@ -105,15 +113,31 @@ export const Tags = styled.div`
   padding: 1.6rem;
   background: #0d0c0f;
   border-radius: 8px;
+
+  @media (max-width: 720px) {
+     flex-wrap: wrap;
+     gap: .8rem;
+
+     div {
+      width: 100%;
+     }
+    }
+
+  
 `;
 
 export const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
 
+  @media (max-width: 720px) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    }
+
   button {
-    flex: auto;
     height: 56px;
     font-weight: 500;
     font-size: 1.6rem;

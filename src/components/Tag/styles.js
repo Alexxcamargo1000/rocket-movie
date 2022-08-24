@@ -4,6 +4,7 @@ export const Container = styled.div`
   border-radius: 1rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 5.6rem;
 
   background-color: ${({ theme, isNew }) =>
