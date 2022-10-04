@@ -1,7 +1,10 @@
 import { Container, StarsWrapper, TagsWrapper } from "./styles";
 import { Star } from "phosphor-react";
+import { useState } from "react";
+import { Rating } from "../Rating";
 
 export function NoteMovie({title, description = "", tags, rating}) {
+  const [active, setActive] = useState(true)
 
   if (description.length > 315)  {
     description = description.substring(0, 316) + '...'
@@ -10,13 +13,7 @@ export function NoteMovie({title, description = "", tags, rating}) {
   return (
     <Container>
       <h2>{title}</h2>
-      <StarsWrapper>
-        <Star className="active" size={16} />
-        <Star className="active" size={16} />
-        <Star className="active" size={16} />
-        <Star className="active" size={16} />
-        <Star size={16} />
-      </StarsWrapper>
+      <Rating rating={rating}/>
 
       <p>{description}</p>
       <TagsWrapper>
