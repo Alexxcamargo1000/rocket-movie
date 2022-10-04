@@ -22,19 +22,6 @@ export const Container = styled.div`
   }
 `;
 
-export const StarsWrapper = styled.div`
-  display: flex;
-  gap: 2px;
-
-  svg {
-    color: ${({ theme }) => theme.COLORS.PRIMARY};
-  }
-
-  .active path {
-    fill: ${({ theme }) => theme.COLORS.PRIMARY};
-  }
-`;
-
 export const TagsWrapper = styled.div`
   display: flex;
   gap: 8px;

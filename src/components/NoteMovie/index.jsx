@@ -1,11 +1,7 @@
-import { Container, StarsWrapper, TagsWrapper } from "./styles";
-import { Star } from "phosphor-react";
-import { useState } from "react";
+import { Container, TagsWrapper } from "./styles";
 import { Rating } from "../Rating";
 
 export function NoteMovie({title, description = "", tags, rating}) {
-  const [active, setActive] = useState(true)
-
   if (description.length > 315)  {
     description = description.substring(0, 316) + '...'
   }
