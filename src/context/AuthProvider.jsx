@@ -16,7 +16,7 @@ export function AuthProvider( {children} ) {
 
 
   localStorage.setItem("@rocketMovie_user", JSON.stringify(user))
-  localStorage.setItem("@rocketMovie_token", JSON.stringify(token))
+  localStorage.setItem("@rocketMovie_token", token)
 
   setData({user, token});
   } catch (error) {
@@ -40,8 +40,10 @@ export function AuthProvider( {children} ) {
   useEffect(()=> {
     const user = localStorage.getItem("@rocketMovie_user")
     const token = localStorage.getItem("@rocketMovie_token")
+    console.log(token);
 
     if(user && token){
+      
     api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
     setData({user: JSON.parse(user), token})

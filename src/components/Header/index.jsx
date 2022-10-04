@@ -9,9 +9,12 @@ import { Input } from "../Input";
 import { Link } from "react-router-dom";
 import { Plus } from "phosphor-react";
 import { useRef } from "react";
+import { useAuth } from "../../context/AuthProvider";
 
 export function Header() {
   const popUp = useRef(null);
+  const { signOut } = useAuth()
+
 
   function heddleTogglePopUp() {
     popUp.current.classList.toggle("hide");
@@ -30,7 +33,7 @@ export function Header() {
         <Profile>
           <div>
             <Link to="/profile">Alex Camargo</Link>
-            <button>sair</button>
+            <button type="button" onClick={signOut} >sair</button>
           </div>
           <Link to="/profile">
             <img
@@ -54,7 +57,7 @@ export function Header() {
             />
             <span>Alex Camargo</span>
           </Link>
-          <button>sair</button>
+          <button type="button" onClick={signOut}>sair</button>
   
       </PopUpMobile>
     </Container>

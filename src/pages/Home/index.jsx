@@ -1,11 +1,23 @@
-
 import { Plus } from "phosphor-react";
 import { Header } from "../../components/Header";
 import { NoteMovie } from "../../components/NoteMovie";
 import { Container, ContainerTitle, Cards } from "./styles";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { api } from "../../services/api";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export function Home() {
+  const [movieNotes, setMovieNotes] = useState([]);
+  useEffect(() => {
+    async function featMovieNotes() {
+      const response = await api.get(`/movie?title&tag`);
+      setMovieNotes(response.data);
+    }
+
+    featMovieNotes();
+  }, []);
+
   return (
     <Container>
       <Header />
@@ -18,12 +30,18 @@ export function Home() {
         </ContainerTitle>
 
         <Cards>
-          <Link to="/preview">
-            <NoteMovie />
-          </Link>
-          <NoteMovie />
-          <NoteMovie />
-          <NoteMovie />
+          {movieNotes.map((movie) => {
+            return (
+              <Link key={String(movie.id)} to="/preview">
+                <NoteMovie
+                title={movie.title}
+                description={movie.description}
+                tags={movie.tags}
+                rating={movie.rating}
+                />
+              </Link>
+            );
+          })}
         </Cards>
       </main>
     </Container>
