@@ -40,7 +40,6 @@ export function AuthProvider( {children} ) {
   useEffect(()=> {
     const user = localStorage.getItem("@rocketMovie_user")
     const token = localStorage.getItem("@rocketMovie_token")
-    console.log(token);
 
     if(user && token){
       

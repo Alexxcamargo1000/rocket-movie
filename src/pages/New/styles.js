@@ -31,8 +31,9 @@ export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  padding: 1rem;
 
-  a {
+  button {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -40,6 +41,8 @@ export const TitleWrapper = styled.div`
     line-height: 2.1rem;
     color: ${({ theme }) => theme.COLORS.PRIMARY};
     transition: 0.2s;
+    background: transparent;
+    width: fit-content ;
 
     &:hover {
       opacity: 0.5;
@@ -113,9 +116,9 @@ export const Tags = styled.div`
   padding: 1.6rem;
   background: #0d0c0f;
   border-radius: 8px;
+  flex-wrap: wrap;
 
   @media (max-width: 720px) {
-     flex-wrap: wrap;
      gap: .8rem;
 
      div {
