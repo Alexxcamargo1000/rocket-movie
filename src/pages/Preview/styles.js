@@ -51,7 +51,7 @@ export const Title = styled.div`
   display: flex;
   align-items: stretch;
   gap: 1.9rem;
-  margin-bottom: 2.4rem;
+  margin-block: 2.4rem;
 
   @media (max-width: 720px) {
     flex-direction: column;
@@ -61,22 +61,7 @@ export const Title = styled.div`
     font-weight: 500;
     font-size: 36px;
     line-height: 47px;
-  }
-
-  .rating {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    .active path {
-      fill: ${({ theme }) => theme.COLORS.PRIMARY};
-    }
-
-    svg {
-      width: 1.875rem;
-      height: 1.875rem;
-      color: ${({ theme }) => theme.COLORS.PRIMARY};
-    }
+    text-transform: capitalize;
   }
 `;
 

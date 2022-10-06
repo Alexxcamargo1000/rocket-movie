@@ -9,7 +9,7 @@ export function NoteMovie({title, description = "", tags, rating}) {
   return (
     <Container>
       <h2>{title}</h2>
-      <Rating rating={rating}/>
+      <Rating rating={rating} size={16}/>
 
       <p>{description}</p>
       <TagsWrapper>

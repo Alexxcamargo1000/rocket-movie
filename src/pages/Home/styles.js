@@ -60,6 +60,13 @@ export const Cards = styled.div`
   gap: 3.2rem;
   justify-content: flex-start;
   text-align: justify;
+
+  > button {
+    background: transparent;
+    border: none;
+    text-align:left ;
+  }
+
   &::-webkit-scrollbar {
     width: 1rem;
 

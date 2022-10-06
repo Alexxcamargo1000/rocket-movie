@@ -19,6 +19,7 @@ export const Container = styled.div`
     margin-block: 1.6rem;
     font-size: 1.6rem;
     line-height: 1.9rem;
+    color: ${({ theme }) => theme.COLORS.TEXT};
   }
 `;
 
