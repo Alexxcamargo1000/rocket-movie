@@ -1,6 +1,7 @@
 import { Header } from "../../components/Header";
 import { TagItem } from "../../components/TagItem";
-import { ArrowLeft, Star, Clock } from "phosphor-react";
+import { ArrowLeft, Clock } from "phosphor-react";
+import { format  } from "date-fns";
 import { Link, useParams } from "react-router-dom";
 import { Container, TitleWrapper, Title, InfoUser, TagsWrapper, Content } from "./styles";
 import { useEffect } from "react";
@@ -15,6 +16,11 @@ export function Preview() {
   const params  = useParams()
   const [movie, setMovie] = useState({})
   const [tags, setTags] = useState([])
+  const [date, setDate] = useState('')
+  const [hour, setHour] = useState('')
+
+
+
 
   useEffect(() => {
     async function fetchMovie() {
@@ -22,9 +28,14 @@ export function Preview() {
       const {movie, tags} = response.data
       setMovie(movie)
       setTags(tags)
-      const [date, hour]= movie.created_at.split(' ')
-      const formattedDate = date.replace(/-/g, '/')
-      console.log(formattedDate);
+      const [date, fullHour]= movie.created_at.split(' ')
+      const [year, month, day] = date.split('-').map(Number)
+      const [hour, minutes,] = fullHour.split(':')
+      const formattedDate = format(new Date(year, month - 1, day) , 'dd/MM/yy')
+
+
+      setDate(formattedDate);
+      setHour(`${hour}:${minutes}`)
     }
 
     fetchMovie()
@@ -51,7 +62,7 @@ export function Preview() {
             />
             <span>Por {user.name}</span>
             <Clock size={16} />
-            <span>23/05/22 às 08:00</span>
+            <span>{date} às {hour}</span>
           </InfoUser>
 
           <TagsWrapper>
