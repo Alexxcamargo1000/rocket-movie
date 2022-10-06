@@ -48,10 +48,12 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Title = styled.div`
+  position: relative;
   display: flex;
   align-items: stretch;
   gap: 1.9rem;
   margin-block: 2.4rem;
+  justify-content: flex-start;
 
   @media (max-width: 720px) {
     flex-direction: column;
@@ -62,6 +64,14 @@ export const Title = styled.div`
     font-size: 36px;
     line-height: 47px;
     text-transform: capitalize;
+  }
+
+  button {
+    position:absolute;
+    right: 1rem;
+    border: none;
+    background-color: transparent;
+    color: white;
   }
 `;
 
