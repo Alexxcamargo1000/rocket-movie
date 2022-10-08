@@ -43,7 +43,7 @@ export const Container = styled.div`
       position: relative;
       width:fit-content;
 
-      button {
+      label {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -54,12 +54,26 @@ export const Container = styled.div`
         bottom: 0;
         right:10px;
         background-color: ${({ theme }) => theme.COLORS.PRIMARY};
+        cursor: pointer;
+        transition: filter 0.2s ;
+        &:hover{
+          filter: brightness(0.5);
+        }
+        > svg {
+          color: ${({ theme }) => theme.COLORS.TEXT_IN_PRIMARY};
+        }
+      }
+
+      input {
+        opacity: 0;
+        width:0.00001px;
       }
 
       img {
         width: 18.6rem;
         height: 18.6rem;
         border-radius: 9.3rem;
+        object-fit:cover;
       }
     }
 

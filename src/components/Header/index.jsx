@@ -10,8 +10,12 @@ import { Link } from "react-router-dom";
 import { Plus } from "phosphor-react";
 import { useRef } from "react";
 import { useAuth } from "../../context/AuthProvider";
+import { api } from "../../services/api";
+import avatarSvg from "../../assets/avatar_placeholder.svg"
 
 export function Header() {
+  const { user } = useAuth();
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarSvg
   const popUp = useRef(null);
   const { signOut } = useAuth()
 
@@ -37,8 +41,8 @@ export function Header() {
           </div>
           <Link to="/profile">
             <img
-              src="https://github.com/alexxcamargo1000.png"
-              alt="Foto de perfil"
+              src={avatarUrl}
+              alt={`foto de perfil do ${user.name}`}
             />
           </Link>
         </Profile>
@@ -52,8 +56,8 @@ export function Header() {
 
           <Link to="/profile">
             <img
-              src="https://github.com/alexxcamargo1000.png"
-              alt="Foto de perfil"
+              src={avatarUrl}
+              alt={`foto de perfil do ${user.name}`}
             />
             <span>Alex Camargo</span>
           </Link>

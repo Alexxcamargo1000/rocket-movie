@@ -36,6 +36,32 @@ export function AuthProvider( {children} ) {
   setData({})
  }
 
+ async function updateUser({user, avatarFile}){
+  
+  try {
+    if(avatarFile) {
+      const formUpdateAvatar = new FormData();
+      formUpdateAvatar.append("avatar", avatarFile)
+      const response = await api.patch("users/avatar", formUpdateAvatar)
+      user.avatar = response.data.avatar
+    }
+    
+    await api.put("users", user)
+    localStorage.setItem("@rocketMovie_user", JSON.stringify(user))
+    setData({user, token: data.token})
+    alert("usuário foi atualizado!")
+  } catch (error) {
+    if (error.response) {
+      alert(error.response.data.message);
+    } else {
+      alert("não foi possível Atualizar ");
+    }
+  }
+
+
+
+ }
+
 
   useEffect(()=> {
     const user = localStorage.getItem("@rocketMovie_user")
@@ -53,6 +79,7 @@ export function AuthProvider( {children} ) {
       value={{
         signIn,
         signOut,
+        updateUser,
         user: data.user,
        }}
     >
