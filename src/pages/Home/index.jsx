@@ -9,6 +9,7 @@ import { useState } from "react";
 
 export function Home() {
   const [movieNotes, setMovieNotes] = useState([]);
+  const [movieName, setMovieName] = useState('');
   const navigate = useNavigate()
   function handleNavigateToPagePreview(id) {
     navigate(`/preview/${id}`)
@@ -16,16 +17,17 @@ export function Home() {
 
   useEffect(() => {
     async function featMovieNotes() {
-      const response = await api.get(`/movie?title&tag`);
+      const response = await api.get(`/movie?title=${movieName}`);
       setMovieNotes(response.data);
     }
 
     featMovieNotes();
-  }, []);
+  }, [movieName]);
+
 
   return (
     <Container>
-      <Header />
+      <Header  search={setMovieName}/>
       <main>
         <ContainerTitle>
           <h1>Meus filmes</h1>

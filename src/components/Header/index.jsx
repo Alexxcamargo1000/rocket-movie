@@ -13,7 +13,7 @@ import { useAuth } from "../../context/AuthProvider";
 import { api } from "../../services/api";
 import avatarSvg from "../../assets/avatar_placeholder.svg"
 
-export function Header() {
+export function Header({search}) {
   const { user } = useAuth();
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarSvg
   const popUp = useRef(null);
@@ -32,7 +32,7 @@ export function Header() {
           RocketMovies
         </Link>
         <InputWrapper>
-          <Input type="text" id="search" placeholder="Pesquisar pelo título" />
+          <Input type="text" id="search" onChange={e => search(e.target.value) } placeholder="Pesquisar pelo título" />
         </InputWrapper>
         <Profile>
           <div>
