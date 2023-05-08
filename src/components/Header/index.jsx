@@ -15,7 +15,7 @@ import avatarSvg from "../../assets/avatar_placeholder.svg"
 
 export function Header({search}) {
   const { user } = useAuth();
-  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarSvg
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarSvg
   const popUp = useRef(null);
   const { signOut } = useAuth()
 

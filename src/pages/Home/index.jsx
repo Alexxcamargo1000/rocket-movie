@@ -17,7 +17,7 @@ export function Home() {
 
   useEffect(() => {
     async function featMovieNotes() {
-      const response = await api.get(`/movie?title=${movieName}`);
+      const response = await api.get(`movie?title=${movieName}`);
       setMovieNotes(response.data);
     }
 

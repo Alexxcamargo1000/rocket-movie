@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = 'http://localhost:3333'
+const BASE_URL = 'https://api-rocket-movie.herokuapp.com/'
 
 export const api = axios.create({
   baseURL: BASE_URL
