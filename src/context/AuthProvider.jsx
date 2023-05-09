@@ -35,6 +35,7 @@ export function AuthProvider( {children} ) {
   localStorage.removeItem("@rocketMovie_token")
   setData({})
  }
+ 
 
  async function updateUser({user, avatarFile}){
   

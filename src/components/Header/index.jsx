@@ -23,7 +23,6 @@ export function Header({search}) {
   function heddleTogglePopUp() {
     popUp.current.classList.toggle("hide");
 
-    console.log(popUp);
   }
   return (
     <Container>
@@ -36,7 +35,7 @@ export function Header({search}) {
         </InputWrapper>
         <Profile>
           <div>
-            <Link to="/profile">Alex Camargo</Link>
+            <Link to="/profile">{user.name}</Link>
             <button type="button" onClick={signOut} >sair</button>
           </div>
           <Link to="/profile">

@@ -8,6 +8,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { api } from "../../services/api";
 import { Rating } from "../../components/Rating";
 import { useAuth } from "../../context/AuthProvider";
+import avatarSvg from "../../assets/avatar_placeholder.svg"
 
 import {
   Container,
@@ -21,6 +22,8 @@ import {
 export function Preview() {
   const navigate = useNavigate();
   const { user } = useAuth();
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}files/${user.avatar}` : avatarSvg
+
   const params = useParams();
   const [movie, setMovie] = useState({});
   const [tags, setTags] = useState([]);
@@ -77,7 +80,7 @@ export function Preview() {
 
           <InfoUser>
             <img
-              src="https://github.com/alexxcamargo1000.png"
+              src={avatarUrl}
               alt="Foto de perfil"
             />
             <span>Por {user.name}</span>
